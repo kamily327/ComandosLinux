@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Básicos Linux</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[url(bg.jpeg)] bg-cover text-white">
+    <h1 class="text-center font-bold text-3xl uppercase m-10">Comandos Linux Essenciais</h1>
+
+    <div class="m-5"> 
+  <table class="border-collapse border border-slate-400 mx-auto w-[1200px]">
+    <thead class="h-[45px]">
+      <tr class="bg-slate-300 text-gray-900">
+        <th class="border border-slate-400 py-2">Categoria</th>
+        <th class="border border-slate-400  py-2">Comando</th>
+        <th class="border border-slate-400  py-2">Descrição</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+    
+      <tr>
+        <td class="border border-slate-400 font-bold" rowspan="11">Arquivos & Navegação</td>
+        <td class="border border-slate-400 py-2">ls</td>
+        <td class="border border-slate-400 py-2">Listar arquivos e pastas</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400 py-2">ls -la</td>
+        <td class="border border-slate-400 py-2">Listar tudo (inclusive ocultos)</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400 py-2">cd nome_da_pasta</td>
+        <td class="border border-slate-400 py-2">Entrar numa pasta</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400 py-2">pwd</td>
+        <td class="border border-slate-400  py-2">Mostrar onde você está</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">mkdir nome</td>
+        <td class="border border-slate-400  py-2">Criar pasta</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">rm -r nome</td>
+        <td class="border border-slate-400  py-2">Apagar pasta e conteúdo</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400 py-2">rm arquivo</td>
+        <td class="border border-slate-400  py-2">Apagar arquivo</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">cp origem destino</td>
+        <td class="border border-slate-400  py-2">Copiar arquivo</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">mv origem destino</td>
+        <td class="border border-slate-400  py-2">Mover ou renomear arquivos</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">touch arquivo.txt</td>
+        <td class="border border-slate-400  py-2">Criar arquivo vazio</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-400  py-2">cat arquivo.txt</td>
+        <td class="border border-slate-400  py-2">Mostrar conteúdo do arquivo</td>
+      </tr>
+
+    
+      <tr>
+        <td class="border border-slate-400 font-bold" rowspan="4">Pacotes</td>
+        <td class="border border-slate-400  py-2">sudo apt update</td>
+        <td class="border border-slate-400  py-2">Atualizar listas de pacotes</td>
+      </tr>
+      <tr>
+    
+        <td class="border border-slate-400  py-2">sudo apt upgrade</td>
+        <td class="border border-slate-400  py-2">Atualizar programas</td>
+      </tr>
+      <tr>
+  
+        <td class="border border-slate-400  py-2">sudo apt remove nome</td>
+        <td class="border border-slate-400  py-2">Remover programa</td>
+      </tr>
+      <tr>
+    
+        <td class="border border-slate-400  py-2">sudo apt install nome</td>
+        <td class="border border-slate-400  py-2">Instalar programa</td>
+      </tr>
+
+      <tr>
+         <td class="border border-slate-400 px-2 font-bold" rowspan="4">Processos</td>
+         <td class="border border-slate-400  py-2">ps</td>
+         <td class="border border-slate-400  py-2">Listar processos</td>
+      </tr>
+
+       <tr>
+         <td class="border border-slate-400  py-2" >top</td>
+         <td class="border border-slate-400  py-2">Monitorar processos em tempo real.</td>
+      </tr>
+
+
+       <tr>
+         <td class="border border-slate-400  py-2">kill PID</td>
+         <td class="border border-slate-400  py-2">Encerrar processo (PID aparece no ps ou top).</td>
+      </tr>
+
+
+         <tr>
+            <td class="border border-slate-400  py-2">killall nome_do_programa</td>
+            <td class="border border-slate-400  py-2">Encerrar processo pelo nome.</td>
+            </tr>
+
+            <tr>
+                 <td class="border border-slate-400 font-bold"  rowspan="3">Permissões</td>
+                 <td class="border border-slate-400 py-2">chmod 755 arquivo</td>
+                 <td  class="border border-slate-400 py-2">Dono pode tudo,grupo e outros podem ler/executar</td>
+            </tr>
+
+             <tr>
+                 <td  class="border border-slate-400 py-2">chmod 777 arquivo</td>
+                 <td  class="border border-slate-400 py-2">Libera tudo pra todo mundo (cuidado)</td>
+            </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2">chown user:group arquivo</td>
+                    <td  class="border border-slate-400 py-2">Mudar dono e grupo do arquivo</td>
+                </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2 font-bold" rowspan="5">Sistema</td>
+                    <td  class="border border-slate-400 py-2">df -h</td>
+                    <td  class="border border-slate-400 py-2">Mostrar espaço em disco</td>    
+                </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2">free -h</td>
+                    <td  class="border border-slate-400 py-2">Mostrar uso de memória</td>
+                </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2">uname -a</td>
+                    <td  class="border border-slate-400 py-2">Mostrar infos do kernel</td>
+                </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2">whoami</td>
+                    <td  class="border border-slate-400 py-2">Mostra nome do Usuário logado</td>
+                </tr>
+
+                <tr>
+                    <td  class="border border-slate-400 py-2">ifconfig</td>
+                    <td  class="border border-slate-400 py-2">Mostrar IP e detalhes da rede</td>
+                </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
